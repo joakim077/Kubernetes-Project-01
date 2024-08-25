@@ -8,4 +8,4 @@ parameters:
   fsType: ext4
   encrypted: "true"  # Optional: Enable encryption if needed
 reclaimPolicy: Retain
-volumeBindingMode: Immediate
+volumeBindingMode: WaitForFirstConsumer
