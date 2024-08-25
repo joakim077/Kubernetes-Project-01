@@ -16,7 +16,9 @@ kubectl create secret generic my-postgresql-credentials --from-literal=password=
 ```
 Add on AWS EBS CSI Drive 
 create Storage class
-Attach Policy to node role - AmazonEBSCSIDriver
+Attach Policy to node role - AmazonEBSCSIDriverkubectl
+
+apply -f storageclass-gp2.yaml
 ```
 
 ## Install cloudnative PG
