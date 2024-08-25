@@ -27,7 +27,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: app/
+          context: /
           push: true
           tags: |
             joakim077/myapp:latest
