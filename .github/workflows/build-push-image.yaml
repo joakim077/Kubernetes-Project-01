@@ -27,7 +27,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: /
           push: true
           tags: |
             joakim077/myapp:latest
@@ -67,5 +66,5 @@ jobs:
       - name: Push deploy manifests to remote repo
         uses: ad-m/github-push-action@v0.6.0
         with: 
-          github_token: ${{ secrets.TOKEN123 }}
+          github_token: ${{ secrets.GITHUB_TOKEN}}
           branch: main
