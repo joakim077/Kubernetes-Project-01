@@ -67,7 +67,6 @@ jobs:
         with:
              remote_branch: 'main' # Notable that this differs from 'production'
              destination_directory: 'deploy/'
-             github_token: ${{ secrets.TOKEN }}
              branch: main
 
       # - name: Push deploy manifests to remote repo
