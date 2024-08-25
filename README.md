@@ -59,7 +59,8 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 ## Install nginx ingress controller 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.4/deploy/static/provider/cloud/deploy.yaml
 
-An ELB will be created Copy add A Record for your Domain
+An ELB will be created and you will get either IP or DNS 
+add A (IP) or CNAME (DNS) record for you domain 
 
 kubectl apply -f cluster_issuer.yaml                                                          
 kubectl apply -f certificate                                                                  
