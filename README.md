@@ -2,10 +2,10 @@
 Deploying an app to EKS cluster and Creating a CICD pipeline
 
 ## Create image and push to dockerHub
-` docker login -u joakim077 `                  
-` docker build --no-cache --platform=linux/amd64 -t myapp .`                         
+` docker login -u your_username `                  
+` docker build --no-cache --platform=linux/amd64 -t myapp . `                         
 ` docker tag your_image your_username/your_repo_name `                                        
-` docker push your_username/your_repo_name`
+` docker push your_username/your_repo_name `
 
 ## Create secret 
 ```
