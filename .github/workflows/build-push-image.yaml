@@ -62,15 +62,9 @@ jobs:
         run: |
           git add deploy/deploy.yaml
           git commit -s -m "[skip ci] Generate deployment manifests"
-      - name: Sync to Remote Repository
-        uses: alleyinteractive/action-deploy-to-remote-repository@v1
-        with:
-             remote_branch: 'main' # Notable that this differs from 'production'
-             destination_directory: 'deploy/'
-             branch: main
-
-      # - name: Push deploy manifests to remote repo
-      #   uses: ad-m/github-push-action@v0.6.0
-      #   with: 
-      #     github_token: ${{ secrets.TOKEN }}
-      #     branch: main
+          
+      - name: Push deploy manifests to remote repo
+        uses: ad-m/github-push-action@v0.6.0
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
