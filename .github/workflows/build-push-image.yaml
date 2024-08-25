@@ -62,9 +62,19 @@ jobs:
         run: |
           git add deploy/deploy.yaml
           git commit -s -m "[skip ci] Generate deployment manifests"
-          
+
       - name: Push deploy manifests to remote repo
-        uses: ad-m/github-push-action@v0.6.0
-        with: 
+        uses: alleyinteractive/action-deploy-to-remote-repository@v1
+        with:
+          remote_repo: 'https://github.com/joakim077/Kubernetes-Project-01-manifest'
+          remote_branch: 'main' # Notable that this differs from 'production'
+          destination_directory: 'deploy/'
+          exclude_list: '.git, .github, .gitmodules, node_modules'
+          pantheon: 'true'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+      
+      # - name: Push deploy manifests to remote repo
+      #   uses: ad-m/github-push-action@v0.6.0
+      #   with: 
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: main
