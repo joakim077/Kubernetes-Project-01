@@ -81,9 +81,12 @@ k6s run load.js
 
 ## Steps 
 Create .github/workflows folder                                                                                                          
-Create a file build-push-image.yaml                                                                                                      
-Create a jinja template app/tmpl/deploy.j2                                                                                               
-Create deployment file - /app/deploy/deploy.yaml                                                                                         
+  Create a file build-push-image.yaml  
+  
+Create a jinja template /tmpl/deploy.j2 
+
+Create deployment file - /deploy/deploy.yaml   
+
 Create GitHub Actions secret - DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD                                                                 
 Make sure your actions have push access as well.  
 
