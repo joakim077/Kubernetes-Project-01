@@ -80,8 +80,7 @@ k6s run load.js
 # GithubActions and ArgoCD
 
 ## Steps 
-Create .github/workflows folder                                                                                                          
-  Create a file build-push-image.yaml  
+Create .github/workflows folder  &  Create a file build-push-image.yaml  
   
 Create a jinja template /tmpl/deploy.j2 
 
