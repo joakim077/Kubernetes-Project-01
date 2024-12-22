@@ -73,7 +73,7 @@ kubectl apply -f hpa.yaml
 
 Install Grafan K6
 
-k6s run load.js
+k6 run load.js
 
 ===============================================
 
